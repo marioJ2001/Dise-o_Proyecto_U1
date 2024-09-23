@@ -1,6 +1,6 @@
 public enum Pago {
-    tarjeta,
-    paypal,
-    pago_por_terceros,
-    codigo_de_regalo
+    Tarjeta,
+    Paypal,
+    Pago_por_terceros,
+    Codigo_de_regalo
 }

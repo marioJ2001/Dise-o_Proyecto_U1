@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Media {
     protected String titulo;
     protected String descripcion;
