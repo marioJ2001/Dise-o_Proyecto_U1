@@ -5,18 +5,19 @@ public class Cuenta {
     private String correo;
     private String contrasenaOG;
     private ArrayList<Perfil> perfiles;
-    //private Membresía membresia;
+    private Membresia membresia;
     private ArrayList<Registro_pagos> registro_pagos;
     private Registro_compra registro_compras;
     public String contrasenaEnc;
 
     //Constructor
-    public Cuenta(String nombre, String correo, String contrasena) {
+    public Cuenta(String nombre, String correo, String contrasena, Membresia membresia) {
         this.nombre = nombre;
         this.correo = correo;
         this.encriptar(contrasena);
         this.perfiles = new ArrayList<>();
         this.registro_pagos = new ArrayList<>();
+        this.membresia = membresia;
     }
 
     private void encriptar(String contrasenaOG){

@@ -47,8 +47,8 @@ public class Main{
         //CATALOGO SERIE
         catalogo.guardar_serie(dinoRey);
         catalogo.guardar_serie(from);
-
-        Cuenta cuenta1 = new Cuenta("mario","mario.jorquera.11@gmail.com","12345");
+        Credito tarjeta = new Credito("Alonso", Fecha_Fin,"123132",1, 2, plan1, Fecha_In, Fecha_cobro, Fecha_Fin);
+        Cuenta cuenta1 = new Cuenta("mario","mario.jorquera.11@gmail.com","12345", tarjeta);
         //Cuenta y perfiles
         cuenta1.crear_perfil("Esteban", false);
         cuenta1.crear_perfil("Pedro", true);
