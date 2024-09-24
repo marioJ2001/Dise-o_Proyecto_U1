@@ -12,17 +12,17 @@ public class Planes{
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.costo = 0;
-        this.tipo_plan = Plan_de_pago.Gratis;
+        this.tipo_plan = Plan_de_pago.GRATIS;
         this.pantalla_activa = 0;
     }
 
     protected void actualizar_plan(Plan_de_pago tipo_plan){
-        if (tipo_plan == Plan_de_pago.Standart) {
-            this.tipo_plan = Plan_de_pago.Standart;
+        if (tipo_plan == Plan_de_pago.STANDART) {
+            this.tipo_plan = Plan_de_pago.STANDART;
             this.costo = 990;
         }
-        if (tipo_plan == Plan_de_pago.Premium) {
-            this.tipo_plan = Plan_de_pago.Premium;
+        if (tipo_plan == Plan_de_pago.PREMIUM) {
+            this.tipo_plan = Plan_de_pago.PREMIUM;
             this.costo = 1990;
         }
     }

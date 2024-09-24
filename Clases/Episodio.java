@@ -1,25 +1,36 @@
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
 
 public class Episodio {
     private int numero;
     private String nombre;
-    private String directores;
-    private String elenco[];
-    private Date lanzamiento;
+    private String director;
+    private ArrayList<String> elenco ;
+    private LocalDate lanzamiento;
     private String descripcion;
-    private int duracion;
-    private boolean visto;
-    private boolean ultima_vez_visto;
+    private LocalTime duracion;
 
-    //Constructor, de ser necesario
-    /*public Episodio(int numero, String nombre, String directores, Date lanzamiento, String descripcion, int duracion) {
+
+    public Episodio(int numero,
+                    String nombre,
+                    String director,
+                    LocalDate lanzamiento,
+                    String descripcion,
+                    LocalTime duracion) {
         this.numero = numero;
         this.nombre = nombre;
-        this.directores = directores;
+        this.director = director;
         this.lanzamiento = lanzamiento;
         this.descripcion = descripcion;
         this.duracion = duracion;
-    }*/
 
-    public void verificar_ultima_vez_visto(){}
+    }
+
+    public void setElenco(String elenco) {
+        this.elenco.add(elenco);
+    }
+    
+    
 }

@@ -1,13 +1,13 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Codigo_de_regalo extends Membresia{
 
     // atributos
     private String codigo;
     private String descripcion;
-    private Date fecha_expiracion;
+    private LocalDate fecha_expiracion;
     
-    public Codigo_de_regalo(String codigo, String descripcion, Date fecha_expiracion,Planes planes,Date fecha_inicio, Date fecha_cobro, Date fecha_termino){
+    public Codigo_de_regalo(String codigo, String descripcion, LocalDate fecha_expiracion,Planes planes,LocalDate fecha_inicio, LocalDate fecha_cobro, LocalDate fecha_termino){
         super(planes, fecha_inicio, fecha_cobro, fecha_termino);
         this.codigo = codigo;
         this.descripcion = descripcion;

@@ -1,11 +1,13 @@
+import java.util.ArrayList;
+
 public class Cuenta {
     private String nombre;
     private String correo;
     private String contrasena;
-    //private Perfil perfiles[];
+    private ArrayList<Perfil> perfiles;
     //private Membresía membresia;
-    //private Registro_pagos registro_pago[];
-    //private Registro_compras registro_compras[];
+    private ArrayList<Registro_pagos> registro_pagos;
+    private ArrayList<Registro_compra> registro_compras;
 
     //Constructor
     /*public Cuenta(String nombre, String correo, String contrasena) {
@@ -14,12 +16,20 @@ public class Cuenta {
         this.contrasena = contrasena;
     }*/
 
-    private void encriptar(){}
+    private void encriptar(){
 
-    private void desencriptar(){}
+    }
 
-    public void verificar_sesión(){}
+    private void desencriptar(){
+        
+    }
 
-    public void seleccionar_perfil(){}
+    public void verificar_sesión(){
+
+    }
+
+    public void seleccionar_perfil(){
+
+    }
 
 }

@@ -1,14 +1,14 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Membresia {
     protected Planes planes;
-    protected Date fecha_inicio;
-    protected Date fecha_cobro;
-    protected Date fecha_termino;
+    protected LocalDate fecha_inicio;
+    protected LocalDate fecha_cobro;
+    protected LocalDate fecha_termino;
     protected Pago forma_pago;
 
     //Constructor, de ser necesario
-    public Membresia(Planes planes,Date fecha_inicio, Date fecha_cobro, Date fecha_termino){
+    public Membresia(Planes planes,LocalDate fecha_inicio, LocalDate fecha_cobro, LocalDate fecha_termino){
         this.planes = planes;
         this.fecha_inicio = fecha_inicio;
         this.fecha_cobro = fecha_cobro;

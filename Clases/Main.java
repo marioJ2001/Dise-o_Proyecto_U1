@@ -1,19 +1,19 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Main{
     public static void main(String[] args){
 
         //Fecha Inicio del plan
-        Date Fecha_In = new Date(124, 7, 10);        
+        LocalDate Fecha_In = LocalDate.of(2024, 9, 3);       
         //Fecha Fin del plan
-        Date Fecha_Fin = new Date(124, 10, 10);
+        LocalDate Fecha_Fin = LocalDate.of(2024, 11, 4);
         //fecha del cobro
-        Date Fecha_cobro = new Date(124, 9, 28);
+        LocalDate Fecha_cobro = LocalDate.of(2024, 9, 29);
 
         
         Planes plan1 = new Planes("Juan", "Ajo");
         Planes plan2 = new Planes("Pedro", "Cebolla");
-        plan1.actualizar_plan(Plan_de_pago.Standart);
+        plan1.actualizar_plan(Plan_de_pago.STANDART);
 
         Pago forma_pago = Pago.Credito;
 
@@ -37,4 +37,4 @@ public class Main{
 
     }
 }
-    
+ 

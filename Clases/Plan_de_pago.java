@@ -1,4 +1,5 @@
-public enum Plan_de_pago
-{
-    Gratis, Standart, Premium
+public enum Plan_de_pago{
+    GRATIS,
+    STANDART, 
+    PREMIUM
 }
