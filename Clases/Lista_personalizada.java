@@ -5,6 +5,7 @@ public class Lista_personalizada {
 
     public Lista_personalizada(String nombre) {
         this.nombre = nombre;
+        this.lista = new Lista_media();
         crear_enlace_publico();
     }
 
