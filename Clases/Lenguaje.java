@@ -1,4 +1,4 @@
 public enum Lenguaje {
-    Español,
-    Ingles
+    ESPAÑOL,
+    INGLES
 }

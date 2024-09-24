@@ -34,6 +34,13 @@ public class Main{
         }
         //Credito credito = new Credito("Alonso", Fecha_Fin,"123132",1, 2, plan1, Fecha_In, Fecha_cobro, Fecha_Fin);
         //Debito tarjeta = new Debito( "20843772-1", "CSM",1, 2, plan1, Fecha_In, Fecha_cobro, Fecha_Fin);
+        
+        Pelicula cars = new Pelicula("Cars", "Michel Bay", 120, 0, "pico pal que lee", Fecha_In, Restriccion_edad.TE, 10);
+
+        Perfil pablo = new Perfil("Esteban", false);
+        pablo.crear_lista("Cocada");
+        pablo.agregar_pelicula_lista(cars);
+        pablo.mostrar_enlace();
 
     }
 }
