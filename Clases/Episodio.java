@@ -13,12 +13,7 @@ public class Episodio {
     private LocalTime duracion;
 
 
-    public Episodio(int numero,
-                    String nombre,
-                    String director,
-                    LocalDate lanzamiento,
-                    String descripcion,
-                    LocalTime duracion) {
+    public Episodio(int numero, String nombre, String director, LocalDate lanzamiento, String descripcion, LocalTime duracion) {
         this.numero = numero;
         this.nombre = nombre;
         this.director = director;

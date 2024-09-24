@@ -20,6 +20,7 @@ public class Catalogo {
     }
 
     public void mostrar_catalogo(boolean es_niño){
+        System.out.println("\nCatalogo\n\nPelicula");
         for (int i=0; i < this.peliculas.size(); i++ ) {
             if (es_niño){
                 if (peliculas.get(i).getResEdad() == Restriccion_edad.NIÑO || peliculas.get(i).getResEdad() == Restriccion_edad.TE) {
@@ -30,6 +31,11 @@ public class Catalogo {
                 System.out.println(peliculas.get(i).getNombre());
             }
         }
+        System.out.println("\nSerie");
+        for (int i=0; i < this.series.size(); i++ ) {
+            System.out.println(series.get(i).getTitulo());
+        }
+        System.out.println("");
     }
 
     public Pelicula get_pelicula(int i, Perfil usuario){

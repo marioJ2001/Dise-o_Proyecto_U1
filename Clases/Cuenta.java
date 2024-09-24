@@ -55,6 +55,15 @@ public class Cuenta {
         }
     }
 
+    public void eliminar_perfil(String nombre){
+        for (int i=0; i< this.perfiles.size(); i++){
+            if (this.perfiles.get(i).getNombre().equals(nombre)){
+                this.perfiles.remove(i);
+                System.out.println("Se eliminó a "+nombre);
+            }
+        }
+    }
+
     public void mostrar_perfiles(){
         if (this.perfiles.size() == 0){
             System.out.println("No existen perfiles asociados");

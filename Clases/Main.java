@@ -43,10 +43,18 @@ public class Main{
         catalogo.guardar_pelicula(cars);
         catalogo.guardar_pelicula(transformers);
         catalogo.guardar_pelicula(sexandthecity);
+
+        //CATALOGO SERIE
+        catalogo.guardar_serie(dinoRey);
+        catalogo.guardar_serie(from);
+
         Cuenta cuenta1 = new Cuenta("mario","mario.jorquera.11@gmail.com","12345");
         //Cuenta y perfiles
         cuenta1.crear_perfil("Esteban", false);
-        cuenta1.crear_perfil("pedro", true);
+        cuenta1.crear_perfil("Pedro", true);
+        cuenta1.crear_perfil("Jonathan", false);
+        cuenta1.crear_perfil("Mario", false);
+        cuenta1.crear_perfil("Alonso", true);
         cuenta1.getPerfil(0).crear_lista("Cocada");
         cuenta1.getPerfil(0).agregar_pelicula_lista(catalogo.get_pelicula(2, cuenta1.getPerfil(0)));
         cuenta1.getPerfil(0).mostrar_enlace();
@@ -54,6 +62,11 @@ public class Main{
         cuenta1.getPerfil(1).agregar_pelicula_lista(catalogo.get_pelicula(2, cuenta1.getPerfil(1)));
         //Mostrar catalogo perfil
         catalogo.mostrar_catalogo(cuenta1.getPerfil(0).getEs_niño());
+        //ELIMINAR PERFIL
+        cuenta1.eliminar_perfil("Pedro");
+        cuenta1.mostrar_perfiles();
+
+
 
 
 

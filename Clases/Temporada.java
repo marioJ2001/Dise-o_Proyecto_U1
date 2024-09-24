@@ -10,6 +10,7 @@ public class Temporada {
     public Temporada(int numero, LocalDate lanzamiento) {
         this.numero = numero;
         this.lanzamiento = lanzamiento;
+        episodio = new ArrayList<>();
     }
 
     //Getters
@@ -30,11 +31,8 @@ public class Temporada {
     public void setLanzamiento(LocalDate lanzamiento) {
         this.lanzamiento = lanzamiento;
     }
-    public void setEpisodios(ArrayList<Episodio> episodio) {
-        this.episodio = episodio;
-    }
-    
-    public void setEpisodios(Episodio episodio){
+
+    public void addEpisodio(Episodio episodio){
         this.episodio.add(episodio);
     }
 }
