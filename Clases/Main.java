@@ -34,13 +34,30 @@ public class Main{
         }
         //Credito credito = new Credito("Alonso", Fecha_Fin,"123132",1, 2, plan1, Fecha_In, Fecha_cobro, Fecha_Fin);
         //Debito tarjeta = new Debito( "20843772-1", "CSM",1, 2, plan1, Fecha_In, Fecha_cobro, Fecha_Fin);
-        
+        //Peliculas
         Pelicula cars = new Pelicula("Cars", "Michel Bay", 120, 0, "pico pal que lee", Fecha_In, Restriccion_edad.TE, 10);
+        Pelicula transformers = new Pelicula("Transformers1", "Pablo", 120, 0,"----",Fecha_In,Restriccion_edad.TE,7);
+        Pelicula sexandthecity = new Pelicula("SexAndTheCity", "pepe", 120, 0,"----",Fecha_In,Restriccion_edad.ADULTO,7);
+        //CATALOGO
+        Catalogo catalogo = new Catalogo();
+        catalogo.guardar_pelicula(cars);
+        catalogo.guardar_pelicula(transformers);
+        catalogo.guardar_pelicula(sexandthecity);
+        Cuenta cuenta1 = new Cuenta("mario","mario.jorquera.11@gmail.com","12345");
+        //Cuenta y perfiles
+        cuenta1.crear_perfil("Esteban", false);
+        cuenta1.crear_perfil("pedro", true);
+        cuenta1.getPerfil(0).crear_lista("Cocada");
+        cuenta1.getPerfil(0).agregar_pelicula_lista(catalogo.get_pelicula(2, cuenta1.getPerfil(0)));
+        cuenta1.getPerfil(0).mostrar_enlace();
+        cuenta1.getPerfil(1).crear_lista("hola");
+        cuenta1.getPerfil(1).agregar_pelicula_lista(catalogo.get_pelicula(2, cuenta1.getPerfil(1)));
+        //Mostrar catalogo perfil
+        catalogo.mostrar_catalogo(cuenta1.getPerfil(0).getEs_niño());
 
-        Perfil pablo = new Perfil("Esteban", false);
-        pablo.crear_lista("Cocada");
-        pablo.agregar_pelicula_lista(cars);
-        pablo.mostrar_enlace();
+
+
+
 
     }
 }

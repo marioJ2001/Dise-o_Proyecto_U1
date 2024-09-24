@@ -3,6 +3,11 @@ public class Catalogo {
     private ArrayList<Pelicula> peliculas;
     private ArrayList<Serie> series;
 
+    public Catalogo() {
+        peliculas = new ArrayList<>();
+        series = new ArrayList<>();
+    }
+
     public void guardar_pelicula(Pelicula _pelicula){
         this.peliculas.add(_pelicula);
     }
@@ -25,5 +30,14 @@ public class Catalogo {
                 System.out.println(peliculas.get(i).getNombre());
             }
         }
-    }  
+    }
+
+    public Pelicula get_pelicula(int i, Perfil usuario){
+        if((this.peliculas.get(i).resEdad == Restriccion_edad.ADULTO || this.peliculas.get(i).resEdad == Restriccion_edad.ADOLESCENTE) && usuario.getEs_niño()){
+            System.out.println("Pelicula adulto");
+        }else{
+            return this.peliculas.get(i);
+        }
+        return null;  //POSIBLE ERROR NULL LISTA
+    }
 }

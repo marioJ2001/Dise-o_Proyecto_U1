@@ -69,6 +69,10 @@ public class Cuenta {
         }
     }
 
+    public Perfil getPerfil(int i){
+        return this.perfiles.get(i);
+    }
+
     public void registrar_pelicula(Pelicula _pelicula){
         this.registro_compras.peliculas.add(_pelicula);
     }
