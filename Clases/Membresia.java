@@ -14,9 +14,7 @@ public class Membresia {
         this.fecha_cobro = fecha_cobro;
         this.fecha_termino = fecha_termino;
     }
-    // Super Clase
-    public Membresia() {
-    }
+    
     //Metodos
     protected void encriptar(){
         System.out.println("Encriptando...");
@@ -29,13 +27,13 @@ public class Membresia {
         System.out.println("Verificando sesion...");
     }
     
-    protected void verificar_forma_pago(Pago forma_pago){
-        if (forma_pago == Pago.Tarjeta) {
-            this.forma_pago = Pago.Tarjeta;
+    protected void actualizar_forma_pago(Pago forma_pago){
+        if (forma_pago == Pago.Debito) {
+            this.forma_pago = Pago.Debito;
         }
-        /*if (forma_pago == Pago.Credito) {
-            return 2;
-        }*/
+        if (forma_pago == Pago.Credito) {
+            this.forma_pago = Pago.Credito;
+        }
         if (forma_pago == Pago.Paypal) {
             this.forma_pago = Pago.Paypal;
         }

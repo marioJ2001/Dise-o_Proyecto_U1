@@ -12,8 +12,4 @@ public class Tarjeta extends Membresia{
         this.codigo_verificacion = codigo_verificacion;
     }
 
-    //private void codificar(){}
-    public void print(){
-        System.out.println(numero);
-    }
 }
