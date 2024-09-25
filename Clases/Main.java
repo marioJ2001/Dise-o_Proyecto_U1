@@ -184,34 +184,36 @@ public class Main{
         cuenta1.crear_perfil("Alonso", true);
         
         //Primer requisito
+        System.out.println("Print usuarios de la cuenta pepe:");
         cuenta1.mostrar_perfiles();
         
         //Segundo requisito
+        System.out.println("\nMostrar Catalogo");
         System.out.println("Catalogo para Estaban (no es niño)");
         Catalogo.mostrar_catalogo(cuenta1.getPerfil(0).getEs_niño());
         
-        System.out.println("Catalogo para Pedro (es niño)");
+        System.out.println("\nCatalogo para Pedro (es niño)");
         Catalogo.mostrar_catalogo(cuenta1.getPerfil(1).getEs_niño());
         
         //tercer requisito
+        System.out.println("Proceso de compra y registro de una pelicula a una cuenta");
         cuenta1.registrar_pelicula(Sherk);
         cuenta1.registrar_pelicula(Deadpool);
         cuenta1.registrar_pelicula(Alien);
-        cuenta1.ver_pelicuas_compradas();
         
         //cuarto requisito
+        System.out.println("\nSe mostraran las peliculas adquiridas");
         cuenta1.ver_pelicuas_compradas();
         
-        //cuarto requisito
-        cuenta1.ver_pelicuas_compradas();
-        
-        //cuarto requisito
+
         //Agregar favoritos
+        System.out.println("\nSe agregaron a favoritos peliculas o series");
         cuenta1.getPerfil(1).agregar_pelicula_favorita(Viernes13);
         cuenta1.getPerfil(1).agregar_pelicula_favorita(ToyStory);
         cuenta1.getPerfil(2).agregar_serie_favorita(Arcane);
 
         //Agregar Reproducciones
+        System.out.println("\nUsuario preprodujo una media");
         Instancia_pelicula verPeli1 = new Instancia_pelicula(Sherk, LocalDate.now(), true);
         verPeli1.setTiempoVisto(LocalTime.of(1,30));
 
@@ -222,11 +224,14 @@ public class Main{
         cuenta1.getPerfil(3).mirar_pelicual(verPeli2);
         
         //Eliminar perfil
+        System.out.println("\nEliminacion del perfil Pedro y Esteban");
         cuenta1.eliminar_perfil("Pedro");
         cuenta1.eliminar_perfil("Esteban");
+        System.out.println("\nPrint perfiles actualizado");
         cuenta1.mostrar_perfiles();
 
         //Eliminar elemento en favoritos
+        System.out.println("\nEliminacion de un elemento media que este en favorito");
         for (int i =0; i < cuenta1.getPerfiles().size() ; i++){
             Catalogo = cuenta1.getPerfil(i).eliminar_pelicula(Viernes13, Catalogo);
             Catalogo = cuenta1.getPerfil(i).eliminar_pelicula(Sherk, Catalogo);
