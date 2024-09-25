@@ -26,9 +26,5 @@ public class Episodio {
     public void setElenco (ArrayList<String> Elenco){
         this.elenco = Elenco;
     }
-    public void setElenco(String elenco) {
-        this.elenco.add(elenco);
-    }
-    
     
 }
