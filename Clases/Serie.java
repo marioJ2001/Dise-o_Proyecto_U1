@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 
-public class Serie {
+public class Serie extends Media{
     private String titulo;
     private ArrayList<Temporada> Temporadas;
 
-    public Serie(String titulo) {
+    public Serie(String titulo, Restriccion_edad resEdad) {
         Temporadas = new ArrayList<>();
         this.titulo = titulo;
+        this.resEdad = resEdad;
     }
 
     public ArrayList<Temporada> getTemporadas(){
@@ -21,4 +22,7 @@ public class Serie {
         Temporadas.add(temporada);
     }
 
+    public Restriccion_edad getResEdad(){
+        return this.resEdad;
+    }
 }

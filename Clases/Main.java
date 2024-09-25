@@ -72,7 +72,7 @@ public class Main{
 
         //Series
         //Jojos
-        Serie Jojos = new Serie("Jojo's");
+        Serie Jojos = new Serie("Jojo's", Restriccion_edad.ADOLESCENTE);
         Episodio jojosEp1 = new Episodio(1,"Dio,  el Invasor", "Naokatsu Tsuda", LocalDate.of(2012,10,05), "Dio se muda con los Joestars", LocalTime.of(0,23));
         Episodio jojosEp2 = new Episodio(2,"Una carta del Pasado", "Naokatsu Tsuda", LocalDate.of(2012,10,12), "Jonathan descubre una carta que revela los oscuros secretos de Dio", LocalTime.of(0,23));
         Episodio jojosEp3 = new Episodio(3,"Juventud con Dio", "Naokatsu Tsuda", LocalDate.of(2012,10,19), "Jonathan busca pruebas para desenmascarar a Dio", LocalTime.of(0,23));
@@ -99,7 +99,7 @@ public class Main{
         Catalogo.guardar_serie(Jojos);
         
         //Shingeki no Kyojin 
-        Serie attackOnTitan = new Serie("Attack on Titan");
+        Serie attackOnTitan = new Serie("Attack on Titan", Restriccion_edad.ADOLESCENTE);
         Episodio attackOnTitanEp1 = new Episodio(1, "To You, in 2000 Years", "Tetsuro Araki", LocalDate.of(2013, 4, 6), "Eren y Mikasa ven la destrucción de su ciudad", LocalTime.of(0, 24));
         Episodio attackOnTitanEp2 = new Episodio(2, "That Day: The Fall of Shiganshina, Part 2", "Tetsuro Araki", LocalDate.of(2013, 4, 13), "Eren, Mikasa y Armin huyen después de que los titanes invaden Shiganshina", LocalTime.of(0, 24));
         Episodio attackOnTitanEp3 = new Episodio(3, "A Dim Light Amid Despair: Humanitys Comeback, Part 1", "Tetsuro Araki", LocalDate.of(2013, 4, 20), "Eren, Mikasa y Armin se alistan en el ejército para luchar contra los titanes", LocalTime.of(0, 24));
@@ -123,7 +123,7 @@ public class Main{
         Catalogo.guardar_serie(attackOnTitan);
         
         //Rompiendo malo
-        Serie breakingBad = new Serie("Breaking Bad");
+        Serie breakingBad = new Serie("Breaking Bad", Restriccion_edad.ADOLESCENTE);
         Episodio breakingBadEp1 = new Episodio(1, "Pilot", "Vince Gilligan", LocalDate.of(2008, 1, 20), "Walter White descubre su diagnóstico", LocalTime.of(0, 58));
         Episodio breakingBadEp2 = new Episodio(2, "Cat's in the Bag...", "Adam Bernstein", LocalDate.of(2008, 1, 27), "Tras su primer intento de cocinar metanfetaminas, Walter y Jesse deben lidiar con las consecuencias: dos cadáveres en su caravana", LocalTime.of(0, 48));
         Episodio breakingBadEp3 = new Episodio(3, "...And the Bag's in the River", "Adam Bernstein", LocalDate.of(2008, 2, 10), "Mientras Jesse intenta deshacerse del cuerpo de uno de los gánsteres, Walter debe lidiar con el segundo hombre, que aún está vivo.", LocalTime.of(0, 48));
@@ -147,7 +147,7 @@ public class Main{
         Catalogo.guardar_serie(breakingBad);
         
         //Arcane
-        Serie Arcane = new Serie("Arcane");
+        Serie Arcane = new Serie("Arcane", Restriccion_edad.ADOLESCENTE);
         Episodio arcaneEp1 = new Episodio(1,"Welcome to the Playground","Pascal Charrue y Arnaud Delord",LocalDate.of(2021,11,06),"Vi y Powder, dos hermanas huérfanas intentan robar en la casa de un científico para conseguir tecnología valiosa", LocalTime.of(0, 43));
         Episodio arcaneEp2 = new Episodio(2,"Some Mysteries Are Better Left Unsolved","Pascal Charrue y Arnaud Delord",LocalDate.of(2021,11,06),"Tras el fallido atraco, las tensiones aumentan entre las fuerzas del orden de Piltover y los habitantes de Zaun.", LocalTime.of(0, 43));
         Episodio arcaneEp3 = new Episodio(3,"The Base Violence Necessary for Change","Pascal Charrue y Arnaud Delord",LocalDate.of(2021,11,06),"Vi se enfrenta a una dura decisión que cambiará su vida y la de su hermana Powder.", LocalTime.of(0, 43));
@@ -189,7 +189,7 @@ public class Main{
         
         //Segundo requisito
         System.out.println("\nMostrar Catalogo");
-        System.out.println("Catalogo para Estaban (no es niño)");
+        System.out.println("Catalogo para Esteban (no es niño)");
         Catalogo.mostrar_catalogo(cuenta1.getPerfil(0).getEs_niño());
         
         System.out.println("\nCatalogo para Pedro (es niño)");

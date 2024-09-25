@@ -38,7 +38,13 @@ public class Catalogo {
         }
         System.out.println("\nSerie");
         for (int i=0; i < this.series.size(); i++ ) {
-            System.out.println(series.get(i).getTitulo());
+            if (es_niño){
+                if (series.get(i).getResEdad() == Restriccion_edad.NIÑO || series.get(i).getResEdad() == Restriccion_edad.TE) {
+                    System.out.println(series.get(i).getTitulo());
+                }
+            }else{
+                System.out.println(series.get(i).getTitulo());
+            }
         }
         System.out.println("");
     }  
