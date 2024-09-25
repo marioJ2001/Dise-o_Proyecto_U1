@@ -12,7 +12,7 @@ public class Episodio {
     private String descripcion;
     private LocalTime duracion;
 
-
+    //Constructor
     public Episodio(int numero, String nombre, String director, LocalDate lanzamiento, String descripcion, LocalTime duracion) {
         this.numero = numero;
         this.nombre = nombre;
@@ -22,7 +22,10 @@ public class Episodio {
         this.duracion = duracion;
 
     }
-
+    
+    public void setElenco (ArrayList<String> Elenco){
+        this.elenco = Elenco;
+    }
     public void setElenco(String elenco) {
         this.elenco.add(elenco);
     }

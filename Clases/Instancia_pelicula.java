@@ -17,4 +17,9 @@ public class Instancia_pelicula {
         this.tiempoVisto = tiempoVisto;
     }
 
+    public Pelicula getPelicula(){
+        return this.pelicula;
+    }
+
+
 }

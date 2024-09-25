@@ -16,4 +16,16 @@ public class Lista_media {
         series.add(serie);
     }
     
+    public ArrayList<Pelicula> getPeliculas(){
+        return this.peliculas;
+    }
+
+    public void eliminar_pelicula (Pelicula pelicula){
+        this.peliculas.remove(pelicula);
+    }
+
+    public void elimnar_serie (Serie serie){
+        this.series.remove(serie);
+    }
+
 }

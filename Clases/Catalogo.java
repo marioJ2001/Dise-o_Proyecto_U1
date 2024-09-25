@@ -15,8 +15,13 @@ public class Catalogo {
     public void guardar_serie(Serie _serie){
         this.series.add(_serie);
     }
-    public void eliminar_media(){
-        System.out.println("hola mundo");
+    
+    public void eliminar_pelicula(Pelicula pelicula){
+        this.peliculas.remove(pelicula);
+    }
+
+    public void eliminar_serie(Serie serie){
+        this.series.remove(serie);
     }
 
     public void mostrar_catalogo(boolean es_niño){
@@ -36,7 +41,7 @@ public class Catalogo {
             System.out.println(series.get(i).getTitulo());
         }
         System.out.println("");
-    }
+    }  
 
     public Pelicula get_pelicula(int i, Perfil usuario){
         if((this.peliculas.get(i).resEdad == Restriccion_edad.ADULTO || this.peliculas.get(i).resEdad == Restriccion_edad.ADOLESCENTE) && usuario.getEs_niño()){
@@ -47,3 +52,4 @@ public class Catalogo {
         return null;  //POSIBLE ERROR NULL LISTA
     }
 }
+

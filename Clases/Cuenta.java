@@ -18,6 +18,7 @@ public class Cuenta {
         this.perfiles = new ArrayList<>();
         this.registro_pagos = new ArrayList<>();
         this.membresia = membresia;
+        this.registro_compras = new Registro_compra();
     }
 
     private void encriptar(String contrasenaOG){
@@ -85,5 +86,18 @@ public class Cuenta {
 
     public void registrar_pelicula(Pelicula _pelicula){
         this.registro_compras.peliculas.add(_pelicula);
+        Registro_pagos tempRegistro = new Registro_pagos(_pelicula.getCosto(), Tipo_moneda.CLP);
+        registro_pagos.add(tempRegistro);
+    }
+
+    public void ver_pelicuas_compradas(){
+        System.out.println("Peliculas adquiridas");
+        for(int i = 0; i < this.registro_compras.peliculas.size() ; i++){
+            System.out.println(this.registro_compras.peliculas.get(i).titulo);
+        }
+    }
+
+    public ArrayList<Perfil> getPerfiles (){
+        return this.perfiles;
     }
 }

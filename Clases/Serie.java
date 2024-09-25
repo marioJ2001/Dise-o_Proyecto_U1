@@ -9,6 +9,10 @@ public class Serie {
         this.titulo = titulo;
     }
 
+    public ArrayList<Temporada> getTemporadas(){
+        return this.Temporadas;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -16,4 +20,5 @@ public class Serie {
     public void addTemporada(Temporada temporada){
         Temporadas.add(temporada);
     }
+
 }

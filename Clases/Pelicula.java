@@ -6,12 +6,12 @@ public class Pelicula extends Media {
     private String info_director;
     private ArrayList<String> elenco ;
     private LocalTime duracion;
-    private float costo;
+    private int costo;
     //Constructor, de ser necesario
     public Pelicula(String titulo,
                 String info_director,
                 int duracion,
-                float costo,
+                int costo,
                 String descripcion,
                 LocalDate fechaLanzamiento,
                 Restriccion_edad resEdad,
@@ -34,7 +34,7 @@ public class Pelicula extends Media {
         return elenco;
     }
 
-    public float getCosto() {
+    public int getCosto() {
         return costo;
     }
 
@@ -54,7 +54,8 @@ public class Pelicula extends Media {
         this.elenco = elenco;
     }
 
-    public void setCosto(float costo) {
+    public void setCosto(int costo) {
         this.costo = costo;
     }    
+
 }
